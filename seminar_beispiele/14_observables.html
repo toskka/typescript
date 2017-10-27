@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ECMA2017: Observables</title>
+    <script src="lib/Rx.js"></script>
+    <script src="src/14_observables01.js"></script>
+</head>
+<body>
+    <h1>Observables</h1>
+    <p>Hier wird ein "Stream" aus einem Item gebildet, auf den eine Subscription gelegt wird.</p>
+    <p>Hierfür bilden wir ein "Observable" (quasi der Stream), der einen "Observer" übergeben bekommt (quasi die Value-Reihe nebst dem Abschlusssignal).</p>
+    <p>Beim "Subscribe" auf das Obeservable (mit .subscribe()) erhalten wir eine "Subscription", die über eine Methode .unsubscribe() verfügt (daher auch als "Disposable" bezeichnet).</p>
+</body>
+</html>
