@@ -33,13 +33,13 @@ let mySubscription2 = myRange.subscribe(
 );
 
 //Timer                             start, intervall
-let myTicker = Rx.Observable.timer(1000, 500);
+let myTicker = Rx.Observable.timer(1000, 100);
 let myTickerSubscr = myTicker.subscribe(
     val => console.log("onNext: ", val),
     err => console.log("onError: ", err),
     () => console.log("tschö ")
 );
 setTimeout(function(){
-    myTickerSubscr
-}, 20000)
+    myTickerSubscr.unsubscribe();
+}, 10000)
 
